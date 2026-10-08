@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>GLG Meat Trading | Wholesale & Retail</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="brand">
+
+        <div class="brand-box">
+            GLG
+        </div>
+
+        <div>
+            <h2>GLG</h2>
+            <span>MEAT TRADING</span>
+        </div>
+
+    </div>
+
+
+    <nav>
+
+        <a href="#home">Home</a>
+
+        <a href="#products">Products</a>
+
+        <a href="#about">About</a>
+
+        <a href="#contact">Contact</a>
+
+        <button class="cart-button"
+                onclick="openCart()">
+
+            🛒 Order
+            <span id="cartCount">0</span>
+
+        </button>
+
+    </nav>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section id="home" class="hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+        <div class="badge">
+            WHOLESALE & RETAIL
+        </div>
+
+        <h1>
+            Quality Meat.<br>
+            <span>Quality Choice.</span>
+        </h1>
+
+        <p>
+            Imported beef, premium sausages,
+            tuna, salmon and frozen seafood
+            for your home or business.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#products"
+               class="main-button">
+
+                SHOP PRODUCTS
+
+            </a>
+
+            <a href="#contact"
+               class="outline-button">
+
+                CONTACT US
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FEATURED ================= -->
+
+<section class="featured">
+
+    <div class="section-heading">
+
+        <span>GLG MEAT TRADING</span>
+
+        <h2>
+            Featured Products
+        </h2>
+
+        <p>
+            Quality cuts and frozen products
+            for every kind of meal.
+        </p>
+
+    </div>
+
+
+    <div class="featured-grid">
+
+
+        <!-- FEATURE 1 -->
+
+        <div class="featured-card">
+
+            <img src="images/beef-1.jpg"
+                 alt="Premium Beef">
+
+            <div class="featured-info">
+
+                <span>BEEF</span>
+
+                <h3>
+                    Premium Beef Cuts
+                </h3>
+
+                <p>
+                    Ribeye, T-bone, Tomahawk,
+                    Tenderloin and Wagyu.
+                </p>
+
+                <a href="#products">
+                    View Beef →
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- FEATURE 2 -->
+
+        <div class="featured-card">
+
+            <img src="images/sausage-1.jpg"
+                 alt="Sausages">
+
+            <div class="featured-info">
+
+                <span>SAUSAGES</span>
+
+                <h3>
+                    Premium Sausages
+                </h3>
+
+                <p>
+                    Hungarian, Bratwurst,
+                    Chicken and more.
+                </p>
+
+                <a href="#products">
+                    View Sausages →
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- FEATURE 3 -->
+
+        <div class="featured-card">
+
+            <img src="images/seafood-1.jpg"
+                 alt="Frozen Seafood">
+
+            <div class="featured-info">
+
+                <span>SEAFOOD</span>
+
+                <h3>
+                    Frozen Seafood
+                </h3>
+
+                <p>
+                    Tuna, salmon and
+                    other imported seafood.
+                </p>
+
+                <a href="#products">
+                    View Seafood →
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PRODUCTS ================= -->
+
+<section id="products"
+         class="products-section">
+
+
+    <div class="section-heading">
+
+        <span>OUR SELECTION</span>
+
+        <h2>
+            Shop Our Products
+        </h2>
+
+        <p>
+            Select a product and add it
+            to your order.
+        </p>
+
+    </div>
+
+
+    <!-- CATEGORY BUTTONS -->
+
+    <div class="categories">
+
+        <button onclick="filterProducts('all')"
+                class="active">
+
+            All
+
+        </button>
+
+        <button onclick="filterProducts('beef')">
+
+            🥩 Beef
+
+        </button>
+
+        <button onclick="filterProducts('sausage')">
+
+            🌭 Sausages
+
+        </button>
+
+        <button onclick="filterProducts('seafood')">
+
+            🐟 Seafood
+
+        </button>
+
+    </div>
+
+
+    <!-- PRODUCT GRID -->
+
+    <div class="product-grid">
+
+
+        <!-- BEEF -->
+
+        <div class="product-card"
+             data-category="beef">
+
+            <div class="product-image">
+
+                <img src="images/beef-1.jpg"
+                     alt="Aussie Tbone">
+
+                <span>
+                    BEEF
+                </span>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>Aussie Tbone</h3>
+
+                <p>
+                    Premium imported beef
+                    cut.
+                </p>
+
+                <button onclick="addToCart('Aussie Tbone')">
+
+                    ADD TO ORDER
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="product-card"
+             data-category="beef">
+
+            <div class="product-image">
+
+                <img src="images/beef-2.jpg"
+                     alt="Brazilian Ribeye">
+
+                <span>
+                    BEEF
+                </span>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>Brazilian Ribeye</h3>
+
+                <p>
+                    Premium ribeye cut.
+                </p>
+
+                <button onclick="addToCart('Brazilian Ribeye')">
+
+                    ADD TO ORDER
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="product-card"
+             data-category="beef">
+
+            <div class="product-image">
+
+                <img src="images/beef-3.jpg"
+                     alt="USDA Choice Tomahawk">
+
+                <span>
+                    BEEF
+                </span>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>USDA Choice Tomahawk</h3>
+
+                <p>
+                    Large premium steak cut.
+                </p>
+
+                <button onclick="addToCart('USDA Choice Tomahawk')">
+
+                    ADD TO ORDER
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="product-card"
+             data-category="beef">
+
+            <div class="product-image">
+
+                <img src="images/beef-4.jpg"
+                     alt="Japan Wagyu">
+
+                <span>
+                    PREMIUM
+                </span>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>Japan Wagyu</h3>
+
+                <p>
+                    Premium Japanese wagyu.
+                </p>
+
+                <button onclick="addToCart('Japan Wagyu')">
+
+                    ADD TO ORDER
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- SAUSAGES -->
+
+        <div class="product-card"
+             data-category="sausage">
+
+            <div class="product-image">
+
+                <img src="images/sausage-1.jpg"
+                     alt="Hungarian Cheese">
+
+                <span>
+                    SAUSAGE
+                </span>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>Hungarian Cheese</h3>
+
+                <p>
+                    Cheese-filled Hungarian
+                    sausage.
+                </p>
+
+                <button onclick="addToCart('Hungarian Cheese')">
+
+                    ADD TO ORDER
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="product-card"
+             data-category="sausage">
+
+            <div class="product-image">
+
+                <img src="images/sausage-2.jpg"
+                     alt="Chicken Bratwurst">
+
+                <span>
+                    SAUSAGE
+                </span>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>Chicken Bratwurst</h3>
+
+                <p>
+                    Chicken bratwurst sausage.
+                </p>
+
+                <button onclick="addToCart('Chicken Bratwurst')">
+
+                    ADD TO ORDER
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="product-card"
+             data-category="sausage">
+
+            <div class="product-image">
+
+                <img src="images/sausage-3.jpg"
+                     alt="Chicken Hungarian">
+
+                <span>
+                    SAUSAGE
+                </span>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>Chicken Hungarian</h3>
+
+                <p>
+                    Chicken Hungarian sausage.
+                </p>
+
+                <button onclick="addToCart('Chicken Hungarian')">
+
+                    ADD TO ORDER
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- SEAFOOD -->
+
+        <div class="product-card"
+             data-category="seafood">
+
+            <div class="product-image">
+
+                <img src="images/seafood-1.jpg"
+                     alt="Premium Tuna">
+
+                <span>
+                    SEAFOOD
+                </span>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>Tuna Premium</h3>
+
+                <p>
+                    Imported frozen tuna.
+                </p>
+
+                <button onclick="addToCart('Tuna Premium')">
+
+                    ADD TO ORDER
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="product-card"
+             data-category="seafood">
+
+            <div class="product-image">
+
+                <img src="images/seafood-2.jpg"
+                     alt="Salmon">
+
+                <span>
+                    SEAFOOD
+                </span>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>Salmon Belly</h3>
+
+                <p>
+                    Imported frozen salmon.
+                </p>
+
+                <button onclick="addToCart('Salmon Belly')">
+
+                    ADD TO ORDER
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="product-card"
+             data-category="seafood">
+
+            <div class="product-image">
+
+                <img src="images/seafood-3.jpg"
+                     alt="Salmon Fillet">
+
+                <span>
+                    SEAFOOD
+                </span>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>Salmon Fillet</h3>
+
+                <p>
+                    Imported salmon fillet.
+                </p>
+
+                <button onclick="addToCart('Salmon Fillet')">
+
+                    ADD TO ORDER
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about"
+         class="about-section">
+
+    <div class="about-image">
+
+        <img src="images/glg-banner.png"
+             alt="GLG Meat Trading">
+
+    </div>
+
+
+    <div class="about-content">
+
+        <span>
+            ABOUT GLG
+        </span>
+
+        <h2>
+            Your Meat & Seafood
+            Selection Starts Here.
+        </h2>
+
+        <p>
+            GLG Meat Trading offers a selection
+            of imported and local meat products,
+            sausages and frozen seafood.
+        </p>
+
+        <p>
+            Whether you're preparing meals at home,
+            running a food business, or buying in
+            larger quantities, GLG provides a
+            variety of products to choose from.
+        </p>
+
+
+        <div class="about-points">
+
+            <div>
+                <strong>01</strong>
+                <span>Imported Products</span>
+            </div>
+
+            <div>
+                <strong>02</strong>
+                <span>Wholesale & Retail</span>
+            </div>
+
+            <div>
+                <strong>03</strong>
+                <span>Meat & Seafood</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ORDER CTA ================= -->
+
+<section class="order-banner">
+
+    <div>
+
+        <span>
+            READY TO ORDER?
+        </span>
+
+        <h2>
+            Choose Your Cuts.
+            Build Your Order.
+        </h2>
+
+        <p>
+            Add your products to the order cart
+            and send us your details.
+        </p>
+
+        <button onclick="openCart()">
+
+            START YOUR ORDER
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact"
+         class="contact-section">
+
+    <div class="section-heading">
+
+        <span>GET IN TOUCH</span>
+
+        <h2>
+            Contact GLG Meat Trading
+        </h2>
+
+    </div>
+
+
+    <div class="contact-grid">
+
+
+        <div class="contact-box">
+
+            <div class="contact-icon">
+                📞
+            </div>
+
+            <h3>
+                Call / Text
+            </h3>
+
+            <p>
+                +63 968 883 6325
+            </p>
+
+        </div>
+
+
+        <div class="contact-box">
+
+            <div class="contact-icon">
+                📍
+            </div>
+
+            <h3>
+                Visit Us
+            </h3>
+
+            <p>
+                4 Armani<br>
+                Novaliches, Quezon City
+            </p>
+
+        </div>
+
+
+        <div class="contact-box">
+
+            <div class="contact-icon">
+                💬
+            </div>
+
+            <h3>
+                Facebook
+            </h3>
+
+            <p>
+                Message us on Facebook
+            </p>
+
+            <!-- PUT YOUR REAL FACEBOOK LINK HERE -->
+
+            <a href="#"
+               target="_blank">
+
+                Visit Facebook →
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CART MODAL ================= -->
+
+<div id="cartModal"
+     class="modal">
+
+    <div class="modal-content">
+
+        <button class="close"
+                onclick="closeCart()">
+
+            ×
+
+        </button>
+
+
+        <h2>
+            Your Order
+        </h2>
+
+        <div id="cartItems">
+
+            <p class="empty">
+                Your order is empty.
+            </p>
+
+        </div>
+
+
+        <hr>
+
+
+        <h3>
+            Customer Information
+        </h3>
+
+
+        <form id="orderForm">
+
+            <input
+                type="text"
+                id="customerName"
+                placeholder="Full Name"
+                required
+            >
+
+
+            <input
+                type="tel"
+                id="customerPhone"
+                placeholder="Phone Number"
+                required
+            >
+
+
+            <textarea
+                id="customerAddress"
+                placeholder="Delivery / Pickup Address"
+                required
+            ></textarea>
+
+
+            <textarea
+                id="customerMessage"
+                placeholder="Additional notes / requests"
+            ></textarea>
+
+
+            <button type="submit"
+                    class="submit-order">
+
+                SUBMIT ORDER
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-brand">
+
+        <div class="brand-box">
+            GLG
+        </div>
+
+        <div>
+
+            <h2>
+                GLG MEAT TRADING
+            </h2>
+
+            <p>
+                Wholesale & Retail
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <p class="copyright">
+
+        © 2026 GLG Meat Trading.
+        All Rights Reserved.
+
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
